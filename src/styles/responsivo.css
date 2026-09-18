@@ -1,0 +1,17 @@
+/* Ajustes de layout para tablets e celulares */
+@media (max-width: 820px) {
+  .grade-introducao,
+  .divisao,
+  .grade-laboratorio,
+  .grade-vantagens {
+    grid-template-columns: 1fr;
+  }
+
+  .introducao {
+    padding-top: 100px;
+  }
+
+  section {
+    padding: 64px 20px;
+  }
+}

@@ -1,0 +1,31 @@
+/* Reset básico e estilos globais aplicados ao documento inteiro */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .logo, .botao, nav a {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+}
+
+code, pre {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+a {
+  color: var(--cor-ciano);
+  text-decoration: none;
+}

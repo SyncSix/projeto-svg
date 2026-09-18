@@ -1,0 +1,116 @@
+/* Estrutura geral: contentor central, seções, navegação e grades */
+.contentor {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 88px 24px;
+}
+
+.titulo-secao {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 600;
+  margin-bottom: 12px;
+  max-width: 680px;
+}
+
+.texto-secao {
+  color: var(--cor-texto-suave);
+  max-width: 620px;
+  margin-bottom: 44px;
+  font-size: 1.02rem;
+}
+
+.fundo-alternativo {
+  background: linear-gradient(180deg, var(--cor-superficie), var(--cor-fundo));
+}
+
+/* Navegação fixa no topo */
+.barra-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(7, 10, 18, .85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.links-topo {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 14px 24px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.links-topo::-webkit-scrollbar {
+  display: none;
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--cor-texto);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo svg {
+  width: 20px;
+  height: 20px;
+}
+
+.links-nav {
+  display: flex;
+  gap: 22px;
+  font-size: .88rem;
+}
+
+.links-nav a {
+  color: var(--cor-texto-suave);
+  transition: color .2s;
+}
+
+.links-nav a:hover {
+  color: var(--cor-ciano);
+}
+
+/* Seção inicial */
+.introducao {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
+}
+
+.grade-introducao {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Grades genéricas reaproveitadas em várias seções */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.divisao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+}

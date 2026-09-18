@@ -1,0 +1,12 @@
+/* Paleta de cores e valores reutilizados em todo o site */
+:root {
+  --cor-fundo: #070a12;
+  --cor-superficie: #0e1420;
+  --cor-superficie-2: #111a2b;
+  --cor-azul: #4f7fff;
+  --cor-roxo: #9d6bff;
+  --cor-ciano: #2fd9d9;
+  --cor-texto: #e8ecf5;
+  --cor-texto-suave: #8b95ac;
+  --cor-borda: rgba(255, 255, 255, .09);
+}

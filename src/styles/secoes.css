@@ -1,0 +1,314 @@
+/* Estilos exclusivos de cada seção (não são reaproveitados em outro lugar) */
+
+/* Seção inicial */
+.introducao h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.08;
+  margin-bottom: 20px;
+}
+
+.introducao h1 span {
+  background: linear-gradient(120deg, var(--cor-azul), var(--cor-roxo), var(--cor-ciano));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.introducao p {
+  color: var(--cor-texto-suave);
+  font-size: 1.08rem;
+  max-width: 460px;
+  margin-bottom: 32px;
+}
+
+.ilustracao {
+  width: 100%;
+  height: auto;
+}
+
+.linha-desenho {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  animation: desenhar 2.4s ease forwards .3s;
+}
+
+@keyframes desenhar {
+  to { stroke-dashoffset: 0; }
+}
+
+.aparecer {
+  opacity: 0;
+  animation: surgir .5s ease forwards;
+}
+
+@keyframes surgir {
+  to { opacity: 1; }
+}
+
+/* Seção "Elementos" */
+.cartao-elemento {
+  background: var(--cor-superficie-2);
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+  padding: 20px;
+  transition: border-color .2s;
+}
+
+.cartao-elemento:hover {
+  border-color: var(--cor-roxo);
+}
+
+.cartao-elemento .nome-elemento {
+  color: var(--cor-ciano);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.cartao-elemento p {
+  color: var(--cor-texto-suave);
+  font-size: .88rem;
+  margin-bottom: 12px;
+}
+
+.cartao-elemento .bloco-codigo {
+  font-size: .76rem;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+}
+
+.cartao-elemento .caixa-previa {
+  min-height: 100px;
+  padding: 14px;
+}
+
+/* Seção "SVG + CSS" */
+.demo-css {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.forma-css {
+  transition: fill .35s, transform .35s;
+  cursor: pointer;
+}
+
+.forma-css:hover {
+  fill: var(--cor-ciano) !important;
+  transform: scale(1.12);
+}
+
+.legenda-forma {
+  text-align: center;
+  font-size: .8rem;
+  color: var(--cor-texto-suave);
+  margin-top: 8px;
+}
+
+/* Seção "SVG + JavaScript" */
+.demo-js {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.controles-js {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.controles-js button {
+  background: var(--cor-superficie-2);
+  border: 1px solid var(--cor-borda);
+  color: var(--cor-texto);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: .85rem;
+  cursor: pointer;
+  transition: border-color .2s;
+}
+
+.controles-js button:hover {
+  border-color: var(--cor-ciano);
+}
+
+/* Seção "Laboratório" */
+.grade-laboratorio {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 32px;
+}
+
+.controles-laboratorio {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.controles-laboratorio label {
+  font-size: .85rem;
+  color: var(--cor-texto-suave);
+  display: flex;
+  justify-content: space-between;
+}
+
+.controles-laboratorio select,
+.controles-laboratorio input[type="range"] {
+  width: 100%;
+}
+
+.controles-laboratorio select {
+  background: var(--cor-superficie-2);
+  color: var(--cor-texto);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 9px;
+}
+
+.previa-laboratorio {
+  background: var(--cor-superficie-2);
+  border: 1px solid var(--cor-borda);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#lab-svg {
+  width: 100%;
+  max-width: 280px;
+}
+
+#lab-codigo {
+  margin-top: 16px;
+}
+
+/* Seção "Onde é utilizado" */
+.cartao-uso {
+  background: var(--cor-superficie-2);
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+  padding: 20px;
+  text-align: left;
+}
+
+.cartao-uso svg {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 12px;
+}
+
+.cartao-uso h3 {
+  font-size: .95rem;
+  margin-bottom: 4px;
+}
+
+.cartao-uso p {
+  color: var(--cor-texto-suave);
+  font-size: .82rem;
+}
+
+/* Seção "Vantagens e limitações" */
+.grade-vantagens {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.coluna-vantagens {
+  background: var(--cor-superficie-2);
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+  padding: 26px;
+}
+
+.coluna-vantagens h3 {
+  margin-bottom: 14px;
+  font-size: 1.05rem;
+}
+
+.coluna-vantagens.limitacoes h3 {
+  color: #ff9d7a;
+}
+
+.coluna-vantagens.positivas h3 {
+  color: var(--cor-ciano);
+}
+
+.coluna-vantagens ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.coluna-vantagens li {
+  color: var(--cor-texto-suave);
+  font-size: .92rem;
+  padding-left: 18px;
+  position: relative;
+}
+
+.coluna-vantagens.positivas li::before {
+  content: "+";
+  color: var(--cor-ciano);
+  position: absolute;
+  left: 0;
+}
+
+.coluna-vantagens.limitacoes li::before {
+  content: "–";
+  color: #ff9d7a;
+  position: absolute;
+  left: 0;
+}
+
+/* Seção "Conclusão" */
+.conclusao-caixa {
+  background: var(--cor-superficie-2);
+  border: 1px solid var(--cor-borda);
+  border-radius: 16px;
+  padding: 44px;
+}
+
+.conclusao-caixa ul {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  list-style: none;
+}
+
+.conclusao-caixa li {
+  color: var(--cor-texto-suave);
+  font-size: .9rem;
+  padding-left: 16px;
+  position: relative;
+}
+
+.conclusao-caixa li::before {
+  content: "›";
+  color: var(--cor-roxo);
+  position: absolute;
+  left: 0;
+}
+
+/* Rodapé */
+footer {
+  border-top: 1px solid var(--cor-borda);
+  padding: 36px 24px;
+  text-align: center;
+  color: var(--cor-texto-suave);
+  font-size: .85rem;
+}
+
+footer strong {
+  color: var(--cor-texto);
+}
