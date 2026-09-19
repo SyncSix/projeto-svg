@@ -9,7 +9,12 @@
 }
 
 .introducao h1 span {
-  background: linear-gradient(120deg, var(--cor-azul), var(--cor-roxo), var(--cor-ciano));
+  background: linear-gradient(
+    120deg,
+    var(--cor-azul),
+    var(--cor-roxo),
+    var(--cor-ciano)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -30,20 +35,24 @@
 .linha-desenho {
   stroke-dasharray: 900;
   stroke-dashoffset: 900;
-  animation: desenhar 2.4s ease forwards .3s;
+  animation: desenhar 2.4s ease forwards 0.3s;
 }
 
 @keyframes desenhar {
-  to { stroke-dashoffset: 0; }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .aparecer {
   opacity: 0;
-  animation: surgir .5s ease forwards;
+  animation: surgir 0.5s ease forwards;
 }
 
 @keyframes surgir {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Seção "Elementos" */
@@ -52,7 +61,7 @@
   border: 1px solid var(--cor-borda);
   border-radius: 14px;
   padding: 20px;
-  transition: border-color .2s;
+  transition: border-color 0.2s;
 }
 
 .cartao-elemento:hover {
@@ -61,19 +70,19 @@
 
 .cartao-elemento .nome-elemento {
   color: var(--cor-ciano);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 600;
   margin-bottom: 6px;
 }
 
 .cartao-elemento p {
   color: var(--cor-texto-suave);
-  font-size: .88rem;
+  font-size: 0.88rem;
   margin-bottom: 12px;
 }
 
 .cartao-elemento .bloco-codigo {
-  font-size: .76rem;
+  font-size: 0.76rem;
   margin-bottom: 12px;
   padding: 10px 12px;
 }
@@ -93,7 +102,9 @@
 }
 
 .forma-css {
-  transition: fill .35s, transform .35s;
+  transition:
+    fill 0.35s,
+    transform 0.35s;
   cursor: pointer;
 }
 
@@ -104,7 +115,7 @@
 
 .legenda-forma {
   text-align: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: var(--cor-texto-suave);
   margin-top: 8px;
 }
@@ -129,9 +140,9 @@
   color: var(--cor-texto);
   padding: 10px 16px;
   border-radius: 8px;
-  font-size: .85rem;
+  font-size: 0.85rem;
   cursor: pointer;
-  transition: border-color .2s;
+  transition: border-color 0.2s;
 }
 
 .controles-js button:hover {
@@ -145,6 +156,10 @@
   gap: 32px;
 }
 
+.grade-laboratorio > * {
+  min-width: 0;
+}
+
 .controles-laboratorio {
   display: flex;
   flex-direction: column;
@@ -152,7 +167,7 @@
 }
 
 .controles-laboratorio label {
-  font-size: .85rem;
+  font-size: 0.85rem;
   color: var(--cor-texto-suave);
   display: flex;
   justify-content: space-between;
@@ -206,13 +221,13 @@
 }
 
 .cartao-uso h3 {
-  font-size: .95rem;
+  font-size: 0.95rem;
   margin-bottom: 4px;
 }
 
 .cartao-uso p {
   color: var(--cor-texto-suave);
-  font-size: .82rem;
+  font-size: 0.82rem;
 }
 
 /* Seção "Vantagens e limitações" */
@@ -251,7 +266,7 @@
 
 .coluna-vantagens li {
   color: var(--cor-texto-suave);
-  font-size: .92rem;
+  font-size: 0.92rem;
   padding-left: 18px;
   position: relative;
 }
@@ -288,7 +303,7 @@
 
 .conclusao-caixa li {
   color: var(--cor-texto-suave);
-  font-size: .9rem;
+  font-size: 0.9rem;
   padding-left: 16px;
   position: relative;
 }
@@ -306,7 +321,7 @@ footer {
   padding: 36px 24px;
   text-align: center;
   color: var(--cor-texto-suave);
-  font-size: .85rem;
+  font-size: 0.85rem;
 }
 
 footer strong {
