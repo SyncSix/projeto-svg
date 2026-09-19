@@ -42,11 +42,9 @@ section {
 .links-topo {
   display: flex;
   align-items: center;
-  gap: 28px;
+  justify-content: space-between;
+  gap: 20px;
   padding: 14px 24px;
-  overflow-x: auto;
-  white-space: nowrap;
-  scrollbar-width: none;
 }
 
 .links-topo::-webkit-scrollbar {
@@ -76,10 +74,32 @@ section {
 .links-nav a {
   color: var(--cor-texto-suave);
   transition: color .2s;
+  flex-shrink: 0;
 }
 
 .links-nav a:hover {
   color: var(--cor-ciano);
+}
+
+.botao-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.botao-menu span {
+  width: 100%;
+  height: 2px;
+  background: var(--cor-texto);
+  border-radius: 2px;
+  transition: transform .25s, opacity .2s;
 }
 
 /* Seção inicial */
