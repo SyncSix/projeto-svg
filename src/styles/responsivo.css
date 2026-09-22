@@ -16,7 +16,7 @@
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 820px) {
   .botao-menu {
     display: flex;
   }
@@ -29,7 +29,6 @@
     flex-direction: column;
     gap: 0;
     background: var(--cor-superficie);
-    border-bottom: 1px solid var(--cor-borda);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;

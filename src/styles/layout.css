@@ -60,9 +60,9 @@ section {
   gap: 8px;
 }
 
-.logo svg {
-  width: 20px;
-  height: 20px;
+.logo img {
+  width: 140px;
+  height: 50px;
 }
 
 .links-nav {
